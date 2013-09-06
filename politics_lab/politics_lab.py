@@ -28,7 +28,11 @@ def create_voting_dict():
 
     The lists for each senator should preserve the order listed in voting data. 
     """
-    return dict() 
+
+    f = open('voting_record_dump109.txt')
+    voteList = list(f)
+
+    return { line.split()[0] : [int(x) for x in line.split()[3:]] for line in voteList  }
     
 
 ## Task 2

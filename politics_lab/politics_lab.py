@@ -48,7 +48,8 @@ def policy_compare(sen_a, sen_b, voting_dict):
         >>> policy_compare('Fox-Epstein','Ravella', voting_dict)
         -2
     """
-    return 0.0
+
+    return sum([a * b for (a, b) in zip(voting_dict[sen_a], voting_dict[sen_b]) ])
 
 
 ## Task 3

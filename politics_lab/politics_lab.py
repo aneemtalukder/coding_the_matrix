@@ -69,6 +69,12 @@ def most_similar(sen, voting_dict):
     Note that you can (and are encouraged to) re-use you policy_compare procedure.
     """
     
+    sen_list = voting_dict[sen]
+    max_so_far 
+    for senator in voting_dict:
+        if senator != sen:
+
+
     return ""
     
 

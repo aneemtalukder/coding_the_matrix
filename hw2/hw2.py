@@ -1,6 +1,7 @@
 # version code 761
 # Please fill out this stencil and submit using the provided submission script.
 
+
 from vec import Vec
 
 
@@ -16,7 +17,7 @@ def vec_select(veclist, k):
     >>> vec_select([v1, v2, v3, v4], 'a') == [Vec(D,{'b': 1}), Vec(D,{'b': 2})]
     True
     '''
-    pass
+    return [ v for v in veclist if v[k] == 0 ]
 
 def vec_sum(veclist, D): 
     '''
@@ -28,7 +29,7 @@ def vec_sum(veclist, D):
     >>> vec_sum([v1, v2, v3, v4], D) == Vec(D, {'b': 13, 'a': 11})
     True
     '''
-    pass
+    return sum(veclist, Vec( D, {} ))
 
 def vec_select_sum(veclist, k, D): 
     '''
@@ -40,7 +41,7 @@ def vec_select_sum(veclist, k, D):
     >>> vec_select_sum([v1, v2, v3, v4], 'a', D) == Vec(D, {'b': 3})
     True
     '''
-    pass
+    return vec_sum( vec_select(veclist, k), D )
 
 
 
